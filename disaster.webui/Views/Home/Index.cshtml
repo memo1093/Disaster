@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"]="Afet Giriş Sayfası";
+}
+@model List<DisasterModel>
+
+<div class="text-center">
+    <h1 class="display-4">Hoşgeldiniz</h1>
+    <div>Afet Kontrol Uygulaması</div>
+    @if (Model.Count()<=0)
+    {
+        <div class="alert alert-warning">Kayıtlı afet yok</div>
+    }else{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Afet Seri No</th>
+                    <th scope="col">Afet Tipi</th>
+                    <th scope="col">İl</th>
+                    <th scope="col">İlçe</th>
+                    <th scope="col">Başlangıç Zamanı</th>
+                    <th scope="col">Bitiş Zamanı</th>
+                    <th scope="col">Enlem</th>
+                    <th scope="col">Boylam</th>
+                    <th scope="col">Neden</th>
+                    <th scope="col">Açıklama</th>
+                    <th scope="col">Etkilenen Alanlar</th>
+                    <th scope="col">Onay Durumu</th>
+                    <th scope="col">Ekler</th>
+                    <th scope="col">İşlemler</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+             @foreach (var disaster in Model)
+        {
+            <tr>
+                <td>@disaster.SerialNo</td>
+                <td>@disaster.DisasterType</td>
+                <td>@disaster.CityName</td>
+                <td>@disaster.TownName</td>
+                <td>@disaster.StartDate.ToShortDateString()</td>
+                <td>@disaster.FinishDate.ToShortDateString()</td>
+                <td>@disaster.Latitute</td>
+                <td>@disaster.Longtitute</td>
+                <td>@disaster.Why</td>
+                <td><a tabindex="0" class="btn btn-sm btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Açıklama" data-content="@disaster.Description">Açıklama</a></td>
+                <td>@disaster.AffectedAreas</td>
+                <td>@EnumDescriptionExtension.GetDescription(disaster.ApproveState)</td>
+                <td>
+                    <a tabindex="1" class="btn btn-sm btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Ekler" data-content="@foreach (var filename in disaster.fileNames){<a href='/uploads/@filename' download>@filename </a>}">Ekler</a>
+                    
+                    </td>
+
+                <td>
+                    
+                    <a asp-controller="Disaster" asp-action="Edit" asp-route-id="@disaster.DisasterId" class="btn btn-success btn-sm">Düzenle</a>
+                    <form asp-controller="Disaster" asp-action="DeleteDisaster" method="POST">
+                    <input type="hidden" name="disasterId" value="@disaster.DisasterId">
+                    <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                    </form>
+                </td>
+
+
+
+            </tr>
+            
+
+            
+        }
+        </tbody>
+        </table>
+
+    }
+    
+       
+    
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

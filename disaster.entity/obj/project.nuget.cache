@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "WIAiaMNbtqME62Cvqw0We3kPYBAxDM0s+TitKHsaIZO4ZKWas9ctHLn7raH+RAJsbILV2IiedZkX/ZK5AqRvHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\Website\\Disaster\\disaster.entity\\disaster.entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pc\\.nuget\\packages\\geoapi.core\\1.7.5\\geoapi.core.1.7.5.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

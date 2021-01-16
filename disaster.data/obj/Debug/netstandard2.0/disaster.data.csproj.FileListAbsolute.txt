@@ -1,0 +1,13 @@
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\bin\Debug\netstandard2.0\disaster.data.deps.json
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\bin\Debug\netstandard2.0\disaster.data.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\bin\Debug\netstandard2.0\disaster.data.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\bin\Debug\netstandard2.0\disaster.entity.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\bin\Debug\netstandard2.0\disaster.entity.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.AssemblyInfo.cs
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\EFCoreMySqlNetTopologySuite.cs
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.csproj.CopyComplete
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.data\obj\Debug\netstandard2.0\disaster.data.pdb

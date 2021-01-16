@@ -1,0 +1,14 @@
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.business.deps.json
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.business.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.business.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.data.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.entity.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.entity.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\bin\Debug\netstandard2.0\disaster.data.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.AssemblyInfo.cs
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.csproj.CopyComplete
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.business\obj\Debug\netstandard2.0\disaster.business.pdb

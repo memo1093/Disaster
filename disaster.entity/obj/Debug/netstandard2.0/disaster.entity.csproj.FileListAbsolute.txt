@@ -1,0 +1,9 @@
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\bin\Debug\netstandard2.0\disaster.entity.deps.json
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\bin\Debug\netstandard2.0\disaster.entity.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\bin\Debug\netstandard2.0\disaster.entity.pdb
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.AssemblyInfo.cs
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.dll
+C:\Users\pc\Desktop\Website\Disaster\disaster.entity\obj\Debug\netstandard2.0\disaster.entity.pdb

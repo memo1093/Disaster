@@ -1,0 +1,200 @@
+@{
+    ViewData["Title"] = "Afet | Afet Ekle";
+}
+@model DisasterModel
+
+
+<div class="container">
+    <div class="row my-2">
+    <h3 class="col-md-6">Afet Giriş</h3>
+</div>
+
+    <form asp-action="CreateDisaster" asp-controller="Disaster" method="post" enctype="multipart/form-data">
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label asp-for="SerialNo" class="col-form-label mb-2"></label>
+            @* <input type="hidden" asp-for="DisasterId"> edit kısmında alınacak *@
+            <input type="text" asp-for="SerialNo" readonly="readonly" class="form-control">
+            <span class="text-danger" asp-validation-for="SerialNo"></span>
+            
+        </div>
+        <div class="col-md-6">
+            <label asp-for="GlideNo" class="col-form-label mb-2"></label>
+            <input type="text" asp-for="GlideNo" readonly="readonly" class="form-control">
+            <span class="text-danger" asp-validation-for="GlideNo"></span>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
+            <label asp-for="StartDate" class="col-form-label mb-2"></label>
+            <input type="date" asp-for="StartDate" class="form-control"
+                value="2021-01-01" onchange="CalculateTime()">
+            <span class="text-danger" asp-validation-for="StartDate"></span>
+                
+        </div>
+        <div class="col-md-4">
+            <label asp-for="FinishDate" class="col-form-label mb-2"></label>
+            <input type="date" asp-for="FinishDate" class="form-control"
+                value="@DateTime.Now" onchange="CalculateTime()">
+            <span class="text-danger" asp-validation-for="FinishDate"></span>
+
+        </div>
+        <div class="col-md-4">
+            <label asp-for="ElapsedTime" class="col-form-label mb-2"></label>
+            <input type="text" asp-for="ElapsedTime" class="form-control"
+                disabled onchange="CalculateTime()">
+
+        </div>
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-md-6">
+            <label asp-for="DisasterType" class="col-form-label mb-2"></label>
+            <input type="text" asp-for="DisasterType" class="form-control">
+            <span class="text-danger" asp-validation-for="DisasterType"></span>
+            
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Why" class="col-form-label mb-2"></label>
+            <input type="text" asp-for="Why" class="form-control">
+            <span class="text-danger" asp-validation-for="Why"></span>
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label asp-for="CityId" class="col-form-label mb-2"></label>
+            <select asp-for="CityId" asp-items="@ViewBag.CityList"
+                class="form-control"></select>
+            <span class="text-danger" asp-validation-for="CityId"></span>
+
+        </div>
+        <div class="col-md-6">
+            
+                <label asp-for="TownId" class="col-form-label mb-2"></label>
+            <select asp-for="TownId" 
+                class="form-control"></select>
+            <span class="text-danger" asp-validation-for="TownId"></span>
+
+            
+        </div>
+        
+    </div>
+    <div class="form-group row justify-content-center">
+        <div class="col-md-6">
+            <label asp-for="Latitute"  class="col-form-label mb-2"></label>
+            <input type="text" asp-for="Latitute" class="form-control" readonly="readonly">
+            <span class="text-danger" asp-validation-for="Latitute"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Longtitute"  class="col-form-label mb-2"></label>
+            <input type="text" asp-for="Longtitute" class="form-control" readonly="readonly">
+            <span class="text-danger" asp-validation-for="Longtitute"></span>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-12">
+            <label asp-for="Description" class="col-form-label mb-2"></label>
+            <textarea asp-for="Description" cols="30" rows="5"
+                class="form-control"></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-12">
+            <label asp-for="AffectedAreas" class="col-form-label mb-2"></label>
+            <textarea asp-for="AffectedAreas" cols="30" rows="5"
+                class="form-control"></textarea>
+            <span class="text-danger" asp-validation-for="AffectedAreas"></span>
+
+                
+        </div>
+    </div>
+    <div class="form-group row">
+        
+
+    <div class="buttons">
+    <div class="upload-button">
+      <div class="label">Dosyaları yükle</div>
+      <input id="files" name="files" type="file" size="1" multiple/>
+      <span class="bg-success">@ViewBag.Message</span>
+    </div>
+  </div>
+
+    <div style="margin-top:15px">
+        <output name="result"></output>
+    </div>
+
+    </div>
+    <div class="form-group row">
+        <div class="input-group mb-3">
+
+                @foreach (var approveState in @ViewBag.ApproveStates)
+                {
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" asp-for="ApproveState" value="@approveState">
+                        <label class="form-check-label" name="approveState" >@EnumDescriptionExtension.GetDescription(approveState)</label>
+                </div>
+                }
+        </div>
+    </div>
+    <div class="form-group justify-content-end row">
+       
+
+                <button type="submit" class="btn btn-primary btn-lg">Kaydet</button>
+        
+    </div>
+    
+
+    </form>
+
+
+@section Scripts{
+    <script>
+        function CalculateTime() {
+
+            var startDateVal = document.querySelector("#StartDate").value;
+            var finishDateVal = document.querySelector("#FinishDate").value;
+
+            var startDate = new Date(startDateVal);
+            var finishDate = new Date(finishDateVal);
+
+            const utc1 = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+            const utc2 = Date.UTC(finishDate.getFullYear(), finishDate.getMonth(), finishDate.getDate());
+            const oneDay = 24 * 60 * 60 * 1000;
+
+
+            var differenceInDays;
+            if (startDateVal != 0 && finishDateVal != 0) {
+                differenceInDays = Math.round((utc2 - utc1) / oneDay);
+                document.querySelector("#ElapsedTime").value = differenceInDays + " gün";
+
+
+            }
+            if (startDateVal > finishDateVal) {
+                document.querySelector("#ElapsedTime").value = 0 + " gün";
+
+            }
+        }
+
+    </script>
+
+    <script src="~/js/data.js"></script>
+    
+}
+
+    
+
+
+
+
+
+
+
+</div>
